@@ -1,0 +1,302 @@
+{% extends "base.html" %}
+
+{% block title %}Improvements{% endblock %}
+
+{% block content %}
+<section class="mantine-hero">
+    <div class="mantine-container">
+        <h1>Incorporating Feedback from Survey Participants</h1>
+    </div>
+</section>
+
+<section class="mantine-container">
+    <div class="mantine-card">
+        <p><b>Previous dashboard:</b> <a
+                href="https://public.tableau.com/app/profile/thomas.lee6836/viz/SFCrime2018-Presentpost-pg-3-9_25_312_17431384901140/TimeSeriesPage?publish=yes">https://public.tableau.com/app/profile/thomas.lee6836/viz/SFCrime2018-Presentpost-pg-3-9_25_312_17431384901140/TimeSeriesPage?publish=yes</a>
+        </p>
+        <h2>Summary</h2>
+        <h3>Visual and Structural Enhancements</h3>
+        <ul>
+            <li><strong>Reduced Visual Clutter:</strong> Replaced complex stacked bar charts with clearer visual types
+                (e.g., line charts, simplified bars), especially in the “Incidents by Neighborhood” view.</li>
+            <li><strong>Split Visuals Across Pages:</strong> Spaced out visualizations into multiple pages to reduce
+                user overwhelm.</li>
+            <li><strong>Streamlined Labels and Titles:</strong> Eliminated vague labels like “miscellaneous” or “other”
+                and revised titles for clarity and consistency.</li>
+        </ul>
+        <h3>Filter Functionality Improvements</h3>
+        <ul>
+            <li><strong>Synchronized Filters:</strong> All filters now consistently update all relevant visuals.</li>
+            <li><strong>Descriptive Tooltips:</strong> Dropdowns now include helpful explanations of their scope and
+                functionality.</li>
+            <li><strong>“Apply All” Button:</strong> Users can now reset or apply all filters in one click.</li>
+            <li><strong>Removed Erroneous Options:</strong> Eliminated “null” crime types and invalid years like 2025
+                from filters.</li>
+        </ul>
+        <h3>Clarity and Accessibility Enhancements</h3>
+        <ul>
+            <li><strong>Plain Language Descriptions:</strong> Simplified section descriptions for users with different
+                levels of data literacy.</li>
+            <li><strong>Expanded Tooltips and Data Definitions:</strong> Added hover explanations for crime types (e.g.,
+                property vs. person crimes) and clarified data ranking versus count distinctions.</li>
+            <li><strong>Dynamic Hover Data:</strong> Tooltip values now reflect filter selections and show accurate,
+                updated info.</li>
+        </ul>
+        <h3>Data Accuracy and Interpretability</h3>
+        <ul>
+            <li><strong>Validated Chart Logic:</strong> Addressed arithmetic inconsistencies and ensured values align
+                across visuals.</li>
+            <li><strong>Automatic Sorting:</strong> Charts like “When Do Incidents Occur?” now default to descending
+                order for clearer insight into crime frequency.</li>
+        </ul>
+        <h3>Demographic Information</h3>
+        <p>Several participants suggested the inclusion of demographic, housing, mental health, or socioeconomic data.
+            While these are valuable, they exceed the current project scope and we addressed this by clarifying that
+            this data is intended to be supplementary.</p>
+        <h3>Project Overview and Purpose</h3>
+        <ul>
+            <li><strong>Simplified Language:</strong> The original text was rewritten to be more direct and welcoming.
+                It avoids technical jargon and clearly communicates who the dashboard is for: community developers,
+                policymakers, and funders.</li>
+            <li><strong>Clarified Intent:</strong> The purpose now emphasizes equity, safety, and revitalization,
+                aligning with the project's mission and stakeholder values.</li>
+            <li><strong>Expectation Management:</strong> We clarify that the dashboard does not include (e.g.,
+                demographics, housing, income data) to help users understand its scope and encourage them to use it in
+                conjunction with other tools.</li>
+        </ul>
+
+        <h3>Data Source and Timeframe</h3>
+        <ul>
+            <li><strong>Specific Data Citation:</strong> Clearly notes the dashboard uses SFPD incident reports from
+                2018 to the present.</li>
+            <li><strong>Definition Clarity:</strong> Mentions that the dashboard follows local classification systems,
+                which adds legitimacy and helps orient users to how crimes are categorized.</li>
+        </ul>
+
+        <h3>How Can It Be Used</h3>
+        <ul>
+            <li><strong>Rewritten for Accessibility:</strong> The bullet points were rewritten in plain language.</li>
+            <li><strong>Specific User Tasks:</strong> They now list specific user tasks, such as identifying affected
+                neighborhoods, analyzing trends by time, examining crime types and correlations.</li>
+            <li><strong>Demographic Context Cue:</strong> While the dashboard doesn’t contain demographic data, the text
+                now notes users should consider combining it with other datasets for broader decision-making, which was
+                a recommendation from our Usability Report.</li>
+        </ul>
+        <h3>Key Findings Section</h3>
+        This section was newly added and is a direct result of the usability feedback:
+        <ul>
+            <li>Boxed Visual Insights were created to help non-technical users grasp<ul>
+                    <li>Temporal Patterns (crime peaks on weekends/evenings, useful for planning)</li>
+                    <li>Geographic Hotspots (targeted interventions)</li>
+                    <li>Trend Analysis (some crimes decreasing, others not—useful for policy)</li>
+                </ul>
+            </li>
+
+            <li>These findings translate data into action and provide executive-level summaries, which were requested by
+                policy and nonprofit stakeholders in your study</li>
+        </ul>
+
+        <h3>Visual and Structural Enhancements</h3>
+        This section was newly added and is a direct result of the usability feedback:
+        <ul>
+            <li><strong>Navigation Buttons:</strong> The “View Crime Trends & Maps” and “Learn About the Researchers”
+                buttons were added to guide users intuitively to next steps.</li>
+
+            <li><strong>Layout Spacing and Hierarchy:</strong> Layout Spacing and Hierarchy: Clear separation between
+                sections and consistent headings make the homepage easier to scan.</li>
+        </ul>
+        <h2>When Incidents Occur Improvements</h2>
+        <h3>Data Accuracy and Interpretability</h3>
+        <ul>
+            <li><strong>Chart Validation and Synchronization:</strong> The “When Do Incidents Occur” section has been
+                overhauled to ensure that the “Incident Classification by Year” and monthly incident line charts respond
+                consistently to selected year filters. This resolves prior confusion where users expected
+                synchronization across visual elements but encountered static or inconsistent charts instead.</li>
+            <li><strong>Improved Tooltip and Hover Data:</strong> Users can now hover over bars and lines to view
+                incident counts by category and month. These details dynamically reflect filter selections, which helps
+                clarify discrepancies and improves real-time interpretability.</li>
+            <li><strong>Automatic Sorting for Readability:</strong> The bar chart now automatically sorts crime types in
+                descending order to help users quickly identify the most frequent incident types by year.</li>
+        </ul>
+        <h3>Temporal Patterns and Year Filter Functionality </h3>
+        <ul>
+            <li><strong>Updated Descriptions in Plain Language:</strong> The section explaining the charts now uses
+                layperson-friendly language to guide users. It clarifies the purpose of the dual chart
+                layout—year-over-year incident totals above and month-by-month variation below—making the function of
+                each visual more intuitive.</li>
+            <li><strong>Clarified Year Filter Behavior:</strong> We addressed confusion around the "Year" dropdown by
+                ensuring that the selected years apply clearly and consistently across all relevant charts. A note now
+                prompts users to click "Apply" after selecting filters to ensure proper rendering.</li>
+            <li><strong>Resolved Year Option Errors:</strong> Erroneous or misleading year entries (e.g., 2025 with
+                incomplete data) were removed. Charts now only display valid years to prevent misinterpretation of
+                trends.</li>
+            <li><strong>Enhanced Layout Readability:</strong> Text crowding within the bar chart labels was addressed by
+                adjusting label spacing, improving legibility, and reducing clutter, especially for crime classification
+                categories like "Miscellaneous" or "Other".</li>
+        </ul>
+        <p>These changes respond directly to user feedback that emphasized difficulty interpreting time trends and
+            inconsistencies in filter behavior. The “When Do Incidents Occur” section now offers more reliable
+            interaction and better supports community decision-making and temporal analysis.</p>
+        <h2>Incidents Occurrence Heatmap Improvements</h2>
+        <p>As part of our broader effort to improve temporal clarity and usability, we implemented the following
+            changes:</p>
+        <h3>Clarified Purpose and Interpretation</h3>
+        <ul>
+            <li><strong>Descriptive Introduction Added:</strong> Added a descriptive introduction to help users
+                understand the function of the heatmap.</li>
+            <li><strong>Clarified Color Meaning:</strong> Clearly explained that darker red cells indicate higher crime
+                counts, enabling users to visually identify peak periods of crime by type and month.</li>
+            <li><strong>Contextual Use Explanation:</strong> Updated text to explain how this tool can support community
+                planning and prevention initiatives.</li>
+        </ul>
+        <h3>Filter Functionality and Control Labeling</h3>
+        <p>We improved data transparency by addressing user confusion about the information being displayed and
+            controlled. We improved dropdown labeling for filters such as:</p>
+        <ul>
+            <li><i>View Parameter</i> (crime category vs. type)</li>
+            <li><i>Time Granularity</i> (month/year)</li>
+            <li><i>Incident Year Filter</i> (selection for valid years).</li>
+        </ul>
+
+        <h3>Tooltip Consistency and Data Values</h3>
+        <ul>
+            <li>Tooltips now show actual crime counts when hovering over any cell.</li>
+            <li>All values dynamically reflect filter selections, giving users accurate, contextual feedback in real
+                time.</li>
+        </ul>
+        <h3>Accessibility and Visual Clarity</h3>
+        <ul>
+            <li>We improved color gradients for readability by all users, including those with visual impairments.</li>
+            <li>Reduced reliance on hovering alone by displaying crime counts directly in each cell based on a usability
+                request from multiple participants.</li>
+        </ul>
+
+        <h3>Removal of Redundant or Unclear Classifications</h3>
+        <ul>
+            <li>Cleaned up labels such as “Miscellaneous” and ensured crime categories align with federal or local
+                classification standards where possible.</li>
+        </ul>
+
+        <h2>Geographic Crime Distribution Improvements</h2>
+        <p>This panel, which combines a heatmap of incident density by neighborhood with a bar chart of the top 15
+            locations, was refined in several key ways to improve interpretability, filter clarity, and comparative
+            insights.</p>
+        <h3>Improved Labeling and User Guidance</h3>
+        <ul>
+            <li>The section introduction was rewritten in plain language to help users quickly understand the
+                dual-purpose of the visual: spatial intensity (via heatmap) and frequency ranking (via bar chart).</li>
+            <li>Additional guidance was included for applying filters and understanding performance expectations when
+                large datasets (e.g., “All” years) are selected.</li>
+        </ul>
+        <h3>Synchronized Filter Controls</h3>
+        <ul>
+            <li>Dropdown filters for year, month, and weekday are now clearly labeled and update both the heatmap and
+                bar chart simultaneously, aligning with improvements to other dashboard components.</li>
+            <li>A reminder to click “Apply” was added to ensure users finalize their filter selections, which was a
+                frequent usability issue noted in feedback.</li>
+        </ul>
+        <h3>Data Clarity and Visual Contrast</h3>
+        <ul>
+            <li>Color scales for the geographic heatmap were adjusted for better contrast and to be more intuitive:
+                darker areas now clearly indicate higher crime rates.</li>
+            <li>The color ramp includes a visible legend, helping users interpret quantitative values (ranging from 20
+                to 11,642) without guesswork.</li>
+        </ul>
+        <h3>Rankings Visualization</h3>
+        <ul>
+            <li>The "Top 15 Incident Locations" bar chart now includes:
+                <ul>
+                    <li>Clearly labeled neighborhood names</li>
+                    <li>Aligned numerical values for quick comparison</li>
+                    <li>More even spacing and adjusted font for improved readability</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h3>Data Accuracy and Performance</h3>
+        <ul>
+            <li>Neighborhood boundary data was reviewed for alignment with city records to ensure that heatmap values
+                are geographically accurate.</li>
+            <li>Performance improvements were made for faster rendering when filters span multiple years or city-wide
+                views.</li>
+        </ul>
+
+        <h2>Crime Type Ranking Improvements</h2>
+        <h3>Clarified Narrative and Use Instructions</h3>
+        <ul>
+            <li>The section header and intro text were rewritten to clearly explain what the chart does not show exact
+                counts, rather ranking order of crime types over time.
+            </li>
+            <li>A tip was added to guide users that they should hover over the lines to view exact incident counts by
+                year and crime type.
+            </li>
+        </ul>
+        <h3>Differentiated Design for Visual Clarity</h3>
+        <ul>
+            <li>Color-coded lines were introduced and refined to visually separate each crime category across years.
+            </li>
+            <li>Additional endpoint labels now display the most recent incident totals (e.g., "Larceny Theft: 23,028
+                incidents"). This makes it easier to interpret current trends without hovering.
+            </li>
+        </ul>
+        <h3>Interpretation Aids for Non-Technical Users</h3>
+        <li>Supporting text now includes examples (e.g., larceny consistently ranking high) to guide user interpretation
+            of temporal rank shifts.
+        </li>
+        <li>References were added to direct users to the “Incident Classification by Year” chart if they want total
+            counts rather than ranks.
+        </li>
+        <h3>Performance and Interactivity</h3>
+        <ul>
+            <li>The line chart now dynamically adjusts when filters are applied, syncing with broader dashboard
+                parameters such as year selection.</li>
+            <li>Performance optimizations were made to reduce lag when displaying several years of data simultaneously.
+            </li>
+
+        </ul>
+        <h3>Cleaned and Verified Crime Category Labels</h3>
+        <ul>
+            <li>Categories such as "Other Miscellaneous" and "Non-Criminal" were clarified, and hover tooltips now
+                include both the rank and number of incidents to improve transparency.</li>
+        </ul>
+        <h2>Crime Type TreeMap Improvements</h2>
+        <p>The TreeMap panel was significantly enhanced to make it easier for users to explore the spatial distribution
+            of crime types across San Francisco neighborhoods. This visualization now offers clearer insights into which
+            types of crimes are most common in specific areas, with improvements aimed at better readability, filtering,
+            and interpretability.</p>
+        <h3>Revised Section Description and Instructions</h3>
+        <ul>
+            <li>Introductory text was rewritten in plain language to explain how to interpret box size (frequency) and
+                color (neighborhood).
+            </li>
+            <li>New guidance now explains how to use the filters for neighborhoods and crime types, and prompts users to
+                click "Apply" to activate selections.
+            </li>
+        </ul>
+        <h3>Enhanced Filter Functionality</h3>
+        <ul>
+            <li>Dropdown filters for Neighborhood and Incident Category are now more responsive and clearly labeled.
+            </li>
+            <li>Tooltip updates allow users to see incident counts, neighborhood names, and percentages when hovering
+                over boxes.</li>
+        </ul>
+        <h3>Improved Labeling and Visual Legibility</h3>
+        <ul>
+            <li>Long or overlapping labels were adjusted to prevent truncation.
+            </li>
+            <li>To improve usability for screen readers, important numeric values (e.g., “20,060 incidents” and
+                “43.30%”) are now embedded directly in each box, which reduces reliance on hover-only access and
+                improves usability for screen readers.
+            </li>
+        </ul>
+        <h3>Color Clarity and Group Differentiation</h3>
+        <p>Neighborhoods are now color-coded with a consistent palette, which makes iit easier to visually group related
+            boxes (e.g., all South of Market incidents appear in shades of dark gray). This helps users quickly compare
+            crime type dominance across areas like the Tenderloin, Mission, and Downtown/Union Square.</p>
+        <h3>Interpretation Support</h3>
+        <p>Text explicitly clarifies that the chart shows distribution within neighborhoods, not time trends, helping
+            manage expectations about what insights this visualization provides.</p>
+    </div>
+
+</section>
+{% endblock %}

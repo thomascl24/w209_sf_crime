@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}About - Data Visualization Project{% endblock %}
+
+{% block content %}
+<section class="mantine-hero">
+    <div class="mantine-container">
+        <h1>Meet Our Team</h1>
+    </div>
+</section>
+
+<section class="mantine-container">
+    <div class="mantine-card">
+        <h2>About the Project</h2>
+        <p>Our San Francisco Crime Data Visualization project is a collaborative effort to make complex crime data more accessible and understandable through interactive visualizations. We've combined data science, statistical analysis, and design principles to create a comprehensive view of crime patterns in San Francisco.</p>
+        
+        <p>The project began as part of a data visualization course at the School of Information at UC Berkeley. Our team wanted to create something that could be useful for both the general public and policy makers interested in understanding crime trends in San Francisco.</p>
+        
+        <p>Using data from the San Francisco Police Department's public data portal, we've created a series of interactive dashboards that allow users to explore various aspects of crime in the city, from temporal patterns to geographic distributions.</p>
+    </div>
+    
+    <h2 style="margin-top: 2rem;">Our Team</h2>
+    <div class="team-grid">
+        <!-- Team Member 1 -->
+        <div class="team-card">
+                <div class="team-image-container">
+                    <div class="team-image-placeholder">
+                        <img src="{{ url_for('static', filename='david_photo.jpg') }}" alt="david_fujii">
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">David Fujii</h3>
+                    <p class="team-role"><b>Contributions:</b> Data acquisition & research, conducted usability tests, time-series dashboard components, final dashboard design and implementation</p>
+                    <div class="team-social">
+                        <a href="https://www.linkedin.com/in/david-fujii/" target="_blank" rel="noopener noreferrer">
+
+                        <span class="mantine-button mantine-button-outline" style="font-size: 0.85rem;">
+                            <i class="fab fa-linkedin"></i> LinkedIn Profile
+                        </span>
+                        </a>
+                    </div>
+                </div>
+            
+        </div>
+        
+        <!-- Team Member 2 -->
+        <div class="team-card">
+                <div class="team-image-container">
+                    <div class="team-image-placeholder">
+                        <img src="{{ url_for('static', filename='paulina_photo.jpeg') }}" alt="paulina_goldman">
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Paulina Veronica Goldman</h3>
+                    <p class="team-role"><b>Contributions:</b> Usability test design & ideation, conducted usability tests, video script & outline, improvement page summary and verbiage, incident category dashboard components</p>
+                    <div class="team-social">
+                        <a href="https://www.linkedin.com/in/paulina-alvarado-goldman/" target="_blank" rel="noopener noreferrer">
+
+                        <span class="mantine-button mantine-button-outline" style="font-size: 0.85rem;">
+                            <i class="fab fa-linkedin"></i> LinkedIn Profile
+                        </span>
+                        </a>
+                    </div>
+                </div>
+            
+        </div>
+        
+        <!-- Team Member 3 -->
+        <div class="team-card">
+                <div class="team-image-container">
+                    <div class="team-image-placeholder">
+                        <img src="{{ url_for('static', filename='thomas_photo.jpg') }}" alt="thomas_lee">
+                    </div>
+                </div>
+                <div class="team-info">
+                    <h3 class="team-name">Thomas Lee</h3>
+                    <p class="team-role"><b>Contributions:</b> Web development, compiling usability test results, conducted usability tests, video editing, geographical dashboard components</p>
+                    <div class="team-social">
+                        <a href="https://www.linkedin.com/in/thomaslee24/" target="_blank" rel="noopener noreferrer">
+
+                        <span class="mantine-button mantine-button-outline" style="font-size: 0.85rem;">
+                            <i class="fab fa-linkedin"></i> LinkedIn Profile
+                        </span>
+                        </a>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+</section>
+{% endblock %}

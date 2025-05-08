@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Data Visualization Project{% endblock %}</title>
+    
+    <!-- Mantine CSS (CDN version) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mantine/core@7.0.0/dist/mantine.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="mantine-header">
+        <nav class="mantine-navbar">
+            <a href="/~thomascl/w209" class="mantine-logo">SF Crime Dashboard</a>
+            <div class="mantine-nav-links" id="nav-links">
+                <a href="/~thomascl/w209" class="mantine-nav-link">Home</a>
+                <a href="/~thomascl/w209/dashboard" class="mantine-nav-link">Dashboard</a>
+                <a href="/~thomascl/w209/improvements" class="mantine-nav-link">Improvements</a>
+                <a href="/~thomascl/w209/about" class="mantine-nav-link">About</a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    <footer class="mantine-footer">
+        <div class="mantine-container">
+            <div class="mantine-footer-content">
+                <div class="mantine-footer-logo">SF Crime Dashboard</div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Main JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+    {% block scripts %}{% endblock %}
+</body>
+</html>

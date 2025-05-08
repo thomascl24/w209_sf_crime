@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Data Visualization Project{% endblock %}
+
+{% block content %}
+<section class="mantine-hero">
+    <div class="mantine-container">
+        <h1>San Francisco Crime Data Visualization</h1>
+        <p>Exploring crime patterns and trends in San Francisco through interactive data visualizations</p>
+    </div>
+</section>
+
+<section class="mantine-container">
+    <div class="mantine-card">
+        <h2>Project Overview</h2>
+        <p>Welcome to our San Francisco Crime Data Visualization project. This interactive web application provides insights into crime patterns and trends in San Francisco.</p>
+        <h2>Purpose</h2>
+        <p>This interactive web application is designed for community developers, policymakers, and funders interested in understanding crime trends in San Francisco to support equitable investment, safety, and revitalization efforts. </p>
+            <p>While our dashboard provides rich insights into crime types, times, and locations, we do not include demographic, housing, or income data. We recommend using this tool alongside other datasets to inform comprehensive decision-making. </p>
+        <h2>Data Source and Timeframe</h2>
+        <p>The dashboard uses San Francisco Police Department incident reports from 2018 to the present. All definitions follow local law enforcement classification systems unless otherwise noted.</p>
+        <h2>How Can It Be Used</h2>
+        <p>Use the dashboards to identify neighborhoods most affected by crime, assess time-based patterns, and inform local intervention planning. Our analysis focuses on various aspects of crime data, including:</p>
+        <ul>
+            <li>Temporal patterns (time of day, day of week, seasonal trends)</li>
+            <li>Geographic distribution of crime incidents</li>
+            <li>Crime type analysis and correlations</li>
+            <li>Demographic factors and their relationship to crime patterns</li>
+        </ul>
+        
+        <p>Use the navigation menu to explore our interactive dashboards and learn more about the team behind this project.</p>
+        
+        <div style="margin-top: 2rem; text-align: center;">
+            <a href="/~thomascl/w209/dashboard" class="mantine-button mantine-button-primary">View Crime Trends & Maps</a>
+            <a href="/~thomascl/w209/about" class="mantine-button mantine-button-outline" style="margin-left: 1rem;">Learn About the Researchers </a>
+        </div>
+    </div>
+    
+    <div class="mantine-card">
+        <h2>Key Findings</h2>
+        <p>Based on our analysis of San Francisco crime data, we've identified several key insights:</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+            <div style="padding: 1.5rem; background-color: #f8f9fa; border-radius: 0.5rem;">
+                <h3><i class="fas fa-clock" style="color: var(--mantine-primary);"></i> Temporal Patterns</h3>
+                <p>Crime incidents show consistent peaks during evening hours and weekends. Seasonal variations are also observed, indicating potential timing for preventive initiatives.</p>
+            </div>
+            
+            <div style="padding: 1.5rem; background-color: #f8f9fa; border-radius: 0.5rem;">
+                <h3><i class="fas fa-map-marker-alt" style="color: var(--mantine-primary);"></i> Geographic Hotspots</h3>
+                <p>A small number of neighborhoods consistently report higher crime levels. This spatial clustering enables targeted, place-based interventions.</p>
+            </div>
+            
+            <div style="padding: 1.5rem; background-color: #f8f9fa; border-radius: 0.5rem;">
+                <h3><i class="fas fa-chart-line" style="color: var(--mantine-primary);"></i> Trend Analysis</h3>
+                <p>Some crime categories, such as larceny and non-violent offenses, have decreased over time, while others like assault have remained steady or increased. These trends are vital for shaping funding priorities and community safety programs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

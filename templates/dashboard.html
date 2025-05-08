@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboards{% endblock %}
+
+{% block head %}
+<style>
+    .dashboard-container {
+        margin-top: 2rem;
+    }
+    
+    .dashboard-navigation {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .tableau-dashboard {
+        width: 100%;
+        min-height: 600px;
+        margin: 1.5rem 0;
+    }
+    
+    .dashboard-section {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        margin-bottom: 3rem;
+    }
+    
+    .dashboard-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<section class="mantine-hero" style="padding: 2rem;">
+    <div class="mantine-container">
+        <h1>Dashboards</h1>
+        <p>Interactive visualizations using SF crime data from 2018 to present</p>
+    </div>
+</section>
+
+<div class="mantine-container dashboard-container">
+    <!-- Dashboard 1: When do Incidents Occur - Line and Bar Graph -->
+    <div class="dashboard-section">
+        <div class="mantine-card">
+            <h2 class="dashboard-title">When do Incidents Occur</h2>
+            <div class="dashboard-description">
+                <p>This part of the dashboard shows when crimes happen most often in San Francisco. The top chart shows the total number of crimes each year, and the line chart below shows how crime changes from month to month.</p>
+                <p>You can use the dropdown menu to choose which years you want to look at. Just keep in mind:</p>
+                <ul>
+                    <li>Some filters only change certain charts — look for notes on the screen to help guide you.</li>
+                    <li>The top chart shows yearly totals for different types of crime.</li>
+                    <li>The bottom chart shows monthly trends, so you can see when crime goes up or down during the year.</li>
+                </ul>
+                <p>If you move your mouse over the bars or lines, you’ll see more details, like how many incidents happened in a certain category or month.</p>
+                <p>If you select a year or group of years in the dropdown filter, make sure to click, “Apply”.</p>
+            </div>
+            <div class="tableau-dashboard">
+                <div class='tableauPlaceholder' id='viz1744071383167' style='position: relative'><noscript><a href='#'><img alt='When do Incidents Occur (2) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhendoIncidentsOccurLineandBarGraph&#47;WhendoIncidentsOccur2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WhendoIncidentsOccurLineandBarGraph&#47;WhendoIncidentsOccur2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhendoIncidentsOccurLineandBarGraph&#47;WhendoIncidentsOccur2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1744071383167');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Dashboard 2: When do Incidents Occur - Timetable Heatmap -->
+    <div class="dashboard-section">
+        <div class="mantine-card">
+            <h2 class="dashboard-title">Incidents Occurrence Heatmap</h2>
+            <div class="dashboard-description">
+                <p>This heatmap shows how often different types of crime happen in San Francisco during each month of the year. The darker the color, the more crimes occurred during that time.</p>
+                <p>You can use the filters above to focus on specific years, months, or crime types.</p>
+                <p>This view is helpful for spotting patterns, such as which months tend to have more property crimes or when violent crime increases. For example, darker red boxes mean higher crime activity. This can help communities and city leaders plan better crime prevention efforts.</p>
+            </div>
+            <div class="tableau-dashboard">
+                <div class='tableauPlaceholder' id='viz1744079554613' style='position: relative'><noscript><a href='#'><img alt='When do Incidents Occur ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhendoIncidentsOccurTimetableheatmap&#47;WhendoIncidentsOccur&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WhendoIncidentsOccurTimetableheatmap&#47;WhendoIncidentsOccur' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhendoIncidentsOccurTimetableheatmap&#47;WhendoIncidentsOccur&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1744079554613');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>            </div>
+        </div>
+    </div>
+    
+    <!-- Dashboard 3: Where do Incidents Occur - Heatmap and Top 15 -->
+    <div class="dashboard-section">
+        <div class="mantine-card">
+            <h2 class="dashboard-title">Geographic Crime Distribution</h2>
+            <div class="dashboard-description">
+                <p>This map and ranking chart show where crimes are happening most often in San Francisco neighborhoods. The heatmap on the left uses color to show how many crimes occur in each area—darker colors mean more incidents. The bar chart on the right lists the top 15 neighborhoods with the highest number of reported crimes.</p>
+                <p>You can use the filters above to look at specific years, months, or days of the week. This helps identify when and where crime is happening most, so community leaders, city officials, and residents can focus on the areas that need the most attention.</p>
+                <p>Tip: After applying filters, please remember to click “Apply”. The heatmap and ranking will update to show trends for your selected time frame.
+                    Note that “All” years may take longer to load on some browsers due to the amount of data.</p>
+            </div>
+            <div class="tableau-dashboard">
+                <div class='tableauPlaceholder' id='viz1744079311238' style='position: relative'><noscript><a href='#'><img alt='Where do incidents occ ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WheredoIncidentsOccurHeatMapandTop15&#47;Wheredoincidentsocc&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WheredoIncidentsOccurHeatMapandTop15&#47;Wheredoincidentsocc' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WheredoIncidentsOccurHeatMapandTop15&#47;Wheredoincidentsocc&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1744079311238');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='877px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>            </div>
+        </div>
+    </div>
+    
+    <!-- Dashboard 4: What Incidents Occur - Category Ranking -->
+    <div class="dashboard-section">
+        <div class="mantine-card">
+            <h2 class="dashboard-title">Crime Type Ranking</h2>
+            <div class="dashboard-description">
+                <p>This chart shows how different types of crime have ranked in San Francisco from 2018 to now. Each line represents a crime category, showing how its rank (from most to least common) has changed over time.
+                    This helps you quickly see which crimes happen most often and how their frequency has shifted over the years. For example, larceny theft has remained one of the top reported crimes, while other categories have gone up or down in rank.</p>
+                <p>Tip: Hover over the lines to see how many incidents were reported for each crime type in a given year.</p>
+                <p><i>This chart shows rankings — not exact counts. For total numbers, refer to the "Incident Classification by Year" section.</i></p>
+            </div>
+            <div class="tableau-dashboard">
+                <div class='tableauPlaceholder' id='viz1744079328411' style='position: relative'><noscript><a href='#'><img alt='What Incidents Occur ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhatIncidentsOccurCategoryRanking&#47;WhatIncidentsOccur&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WhatIncidentsOccurCategoryRanking&#47;WhatIncidentsOccur' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhatIncidentsOccurCategoryRanking&#47;WhatIncidentsOccur&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1744079328411');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>            </div>
+        </div>
+    </div>
+    
+    <!-- Dashboard 5: What Incidents Occur - TreeMap -->
+    <div class="dashboard-section">
+        <div class="mantine-card">
+            <h2 class="dashboard-title">Crime Type TreeMap</h2>
+            <div class="dashboard-description">
+                <p>This chart shows which types of crimes happen most often in different neighborhoods. Each box represents a specific crime category in a neighborhood. The bigger the box, the more often that crime occurred there. Colors represent different neighborhoods. Size shows how common each crime type is.</p>
+                <p>You can use the filters above to focus on certain neighborhoods or crime types. Please remember to select “Apply”.  This view helps you quickly compare crime patterns across areas in San Francisco and see which neighborhoods deal with specific issues like theft, assault, or drug offenses. This view is useful for spotting dominant crime types in each area. It doesn't show crime rates or how they've changed over time.</p>
+                <p>Tip: Hover over a box to see the neighborhood, crime type, and number of incidents.</p>
+            </div>
+            <div class="tableau-dashboard">
+                <div class='tableauPlaceholder' id='viz1744079344515' style='position: relative'><noscript><a href='#'><img alt='What Incidents Occur (2) ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhatIncidentsOccurTreeMap&#47;WhatIncidentsOccur2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='WhatIncidentsOccurTreeMap&#47;WhatIncidentsOccur2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Wh&#47;WhatIncidentsOccurTreeMap&#47;WhatIncidentsOccur2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1744079344515');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function() {
+  // Set up Intersection Observer for scroll animations
+  const dashboardSections = document.querySelectorAll('.dashboard-section');
+  
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1 // Trigger when 10% of the element is visible
+  };
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        // Once the animation is triggered, we can stop observing this element
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  // Start observing each dashboard section
+  dashboardSections.forEach(section => {
+    observer.observe(section);
+  });
+});
+</script>
+{% endblock %}
